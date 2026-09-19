@@ -22,11 +22,17 @@
         <a class="brand" href="#top" aria-label="R V Maritime home">
           <img src="assets/rv-maritime-logo-cropped.png" alt="R V Maritime Private Limited logo" />
         </a>
-        <nav class="nav" aria-label="Primary navigation">
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav id="primary-navigation" class="nav" aria-label="Primary navigation">
           <a href="#services">Services</a>
           <a href="#recycling">Ship Recycling</a>
           <a href="#coverage">Coverage</a>
           <a href="#contact">Contact</a>
+          <a class="mobile-nav-cta" href="#contact">Enquire Now</a>
         </nav>
         <a class="header-cta" href="#contact">Enquire Now</a>
       </div>
@@ -283,5 +289,39 @@
         </div>
       </div>
     </footer>
+    <script>
+      const siteHeader = document.querySelector(".site-header");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const primaryNavigation = document.querySelector("#primary-navigation");
+
+      if (siteHeader && menuToggle && primaryNavigation) {
+        const setMenuOpen = (open) => {
+          siteHeader.classList.toggle("is-menu-open", open);
+          menuToggle.setAttribute("aria-expanded", String(open));
+          menuToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+        };
+
+        menuToggle.addEventListener("click", () => {
+          setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+        });
+
+        primaryNavigation.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => setMenuOpen(false));
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setMenuOpen(false);
+            menuToggle.focus();
+          }
+        });
+
+        window.matchMedia("(min-width: 701px)").addEventListener("change", (event) => {
+          if (event.matches) {
+            setMenuOpen(false);
+          }
+        });
+      }
+    </script>
   </body>
 </html>

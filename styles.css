@@ -101,6 +101,11 @@ img {
   color: var(--red);
 }
 
+.menu-toggle,
+.mobile-nav-cta {
+  display: none;
+}
+
 .header-cta,
 .button,
 .contact-form button {
@@ -923,29 +928,116 @@ section {
 @media (max-width: 700px) {
   .site-header {
     position: relative;
-    padding-block: 10px;
+    padding-block: 10px 12px;
   }
 
   .site-header-inner {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .brand {
     width: 184px;
+    min-width: 0;
   }
 
   .brand img {
     height: 54px;
   }
 
+  .menu-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    align-self: center;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: var(--shadow-xs);
+  }
+
+  .menu-toggle:focus-visible {
+    outline: 4px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  .menu-toggle span {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    border-radius: 999px;
+    background: #344054;
+    transition: transform 160ms ease, opacity 160ms ease;
+  }
+
+  .menu-toggle span:nth-child(1) {
+    transform: translateY(-7px);
+  }
+
+  .menu-toggle span:nth-child(3) {
+    transform: translateY(7px);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
   .nav {
-    justify-content: flex-start;
-    gap: 20px;
+    display: none;
+    grid-column: 1 / -1;
     width: 100%;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    font-size: 14px;
+    margin-top: 4px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .site-header.is-menu-open .nav {
+    display: grid;
+    gap: 4px;
+  }
+
+  .nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #344054;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .nav a:hover {
+    background: var(--soft);
+    color: var(--ink);
+  }
+
+  .mobile-nav-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+    color: #fff !important;
+    background: var(--red);
+  }
+
+  .mobile-nav-cta:hover {
+    background: var(--red-dark) !important;
+    color: #fff !important;
   }
 
   .hero,
