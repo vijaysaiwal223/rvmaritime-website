@@ -1151,6 +1151,16 @@ section {
   text-wrap: pretty;
 }
 
+.leader-card .leader-experience {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: #344054;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
 .about-pillars .section-head p {
   max-width: 760px;
   margin: 20px auto 0;

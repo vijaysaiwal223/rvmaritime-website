@@ -12,9 +12,27 @@ export const metadata: Metadata = {
 };
 
 const leaders = [
-  { name: "Mr. Vinay Kumar Tripathi", role: "Founder", focus: "Marine engineering and technical guidance", image: "/assets/about-headshot-03.jpg" },
-  { name: "Mr. Vivek Mishra", role: "Co-Founder and Managing Director", focus: "Operations and technical leadership", image: "/assets/about-headshot-02.jpg" },
-  { name: "Mr. Ridham Sonpal", role: "Co-Founder and Director", focus: "Shipping, logistics, operations, and growth", image: "/assets/about-headshot-01.jpg" },
+  {
+    name: "Mr. Vinay Kumar Tripathi",
+    role: "Founder",
+    focus: "Marine engineering and technical guidance",
+    experience: "15+ years of experience in technical ship operations and maintenance.",
+    image: "/assets/about-headshot-03.jpg",
+  },
+  {
+    name: "Mr. Vivek Mishra",
+    role: "Co-Founder and Managing Director",
+    focus: "Operations and technical leadership",
+    experience: "12+ years of experience in technical ship operations and maintenance.",
+    image: "/assets/about-headshot-02.jpg",
+  },
+  {
+    name: "Mr. Ridham Sonpal",
+    role: "Co-Founder and Director",
+    focus: "Shipping, logistics, operations, and growth",
+    experience: "3 years of experience in ship operations and marketing.",
+    image: "/assets/about-headshot-01.jpg",
+  },
 ];
 
 const highlights = [
@@ -136,7 +154,8 @@ export default function AboutPage() {
                 <div className="leader-details">
                   <p>{leader.role}</p>
                   <h3>{leader.name}</h3>
-                  <span>{leader.focus}</span>
+                  <span className="leader-focus">{leader.focus}</span>
+                  <span className="leader-experience">{leader.experience}</span>
                 </div>
               </article>
             ))}
