@@ -17,25 +17,26 @@ import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger 
 import { cn } from "@/lib/utils";
 
 const services = [
-  { title: "Ship Agency", description: "Port calls, clearances, and local attendance", href: "#services" },
-  { title: "Ship Recycling", description: "Alang delivery and recycling coordination", href: "#recycling" },
-  { title: "Marine Spares", description: "New, reusable, and reconditioned machinery", href: "#services" },
-  { title: "Ship Chandling", description: "Provisions, stores, and urgent supplies", href: "#services" },
-  { title: "Cargo & Tank", description: "Cargo handling and tank service support", href: "#services" },
-  { title: "Brokerage", description: "Cash buying and commercial coordination", href: "#services" },
+  { title: "Ship Agency", description: "Port calls, clearances, and local attendance", href: "/#services" },
+  { title: "Ship Recycling", description: "Alang delivery and recycling coordination", href: "/#recycling" },
+  { title: "Marine Spares", description: "New, reusable, and reconditioned machinery", href: "/#services" },
+  { title: "Ship Chandling", description: "Provisions, stores, and urgent supplies", href: "/#services" },
+  { title: "Cargo & Tank", description: "Cargo handling and tank service support", href: "/#services" },
+  { title: "Brokerage", description: "Cash buying and commercial coordination", href: "/#services" },
 ];
 
 const navigationLinks = [
-  { label: "Ship Recycling", href: "#recycling" },
-  { label: "Coverage", href: "#coverage" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Ship Recycling", href: "/#recycling" },
+  { label: "Coverage", href: "/#coverage" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Navbar5() {
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <a className="brand" href="#top" aria-label="R V Maritime home">
+        <a className="brand" href="/" aria-label="R V Maritime home">
           <img src="/assets/logo-white-bg.png" alt="R V Maritime Private Limited logo" />
         </a>
 
@@ -68,7 +69,7 @@ export function Navbar5() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <a href="#contact" className={cn(buttonVariants(), "hidden justify-self-end lg:inline-flex")}>Enquire Now</a>
+        <a href="/#contact" className={cn(buttonVariants(), "hidden justify-self-end lg:inline-flex")}>Enquire Now</a>
 
         <Sheet>
           <SheetTrigger asChild>
@@ -79,7 +80,7 @@ export function Navbar5() {
           <SheetContent>
             <SheetHeader>
               <SheetTitle>
-                <a className="flex w-fit items-center gap-3" href="#top">
+                <a className="flex w-fit items-center gap-3" href="/">
                   <img className="size-14 rounded-lg object-contain shadow-xs" src="/assets/logo-white-bg.png" alt="" />
                   <span>R V Maritime</span>
                 </a>
@@ -116,7 +117,7 @@ export function Navbar5() {
               </div>
 
               <SheetClose asChild>
-                <a href="#contact" className={cn(buttonVariants(), "mt-5 w-full")}>Enquire Now</a>
+                <a href="/#contact" className={cn(buttonVariants(), "mt-5 w-full")}>Enquire Now</a>
               </SheetClose>
             </nav>
           </SheetContent>
