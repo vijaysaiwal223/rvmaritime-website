@@ -4,6 +4,12 @@ import { SiteFooter } from "@/components/ui/site-footer";
 
 const ports = ["Alang", "Bhavnagar", "Kandla", "Mundra", "Jamnagar", "Mumbai", "Cochin", "Vizag", "Paradip", "Haldia"];
 
+const isoStandards = [
+  { standard: "ISO 9001:2015", label: "Quality" },
+  { standard: "ISO 14001:2015", label: "Environment" },
+  { standard: "ISO 45001:2018", label: "Health & Safety" },
+];
+
 export default function Home() {
   return (
     <>
@@ -24,10 +30,9 @@ export default function Home() {
           </video>
           <div className="hero-overlay" />
           <div className="hero-content">
-            <p className="eyebrow">Marine services and engineering</p>
-            <h1>Marine support for vessels, owners, and recyclers.</h1>
+            <h1>Marine spare parts supplier and engineering services</h1>
             <p className="hero-copy">
-              R V Maritime Private Limited supports commercial shipping requirements with practical, round-the-clock coordination for port calls, ship recycling, spares, chandling, cargo operations, engineering assistance, and vessel support services across India.
+             R.V. Maritime supplies marine spare parts and engineering solutions for vessel owners, operators, and recycling partners—helping keep operations safe, efficient, and on schedule.
             </p>
             <div className="hero-actions">
               <a className="button primary" href="#services">Explore Services</a>
@@ -58,6 +63,32 @@ export default function Home() {
                 Operational planning, supplier coordination, and port follow-up handled through one desk.
               </figcaption>
             </figure>
+          </div>
+        </section>
+
+        <section id="certifications" className="certifications">
+          <div className="certifications-inner">
+            <div className="certifications-copy">
+              <p className="eyebrow">ISO Certified Company</p>
+              <h2>Certified maritime support with recognised ISO standards.</h2>
+              <p>
+                The company is certified under internationally recognised management system standards for quality, environmental responsibility, and occupational health and safety.
+              </p>
+              <div className="iso-standard-strip" aria-label="ISO standards">
+                {isoStandards.map((item) => (
+                  <span key={item.standard}>
+                    <strong>{item.standard}</strong>
+                    <small>{item.label}</small>
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="certification-visual" aria-label="R V Maritime ISO certified company">
+              <div className="certification-seal">
+                <img src="/assets/iso-mark.png" alt="ISO certification mark" />
+              </div>
+              <p>Quality, environmental, and safety management systems.</p>
+            </div>
           </div>
         </section>
 

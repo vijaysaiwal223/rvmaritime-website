@@ -28,7 +28,7 @@ const circularStd = localFont({
 export const metadata: Metadata = {
   title: "R V Maritime Private Limited | Marine Services & Engineering",
   description:
-    "R V Maritime Private Limited provides marine services, engineering, port support, ship recycling assistance, ship chandling, marine spares, and cargo operation services across Indian ports.",
+    "R V Maritime Private Limited provides ISO-certified marine services, engineering, port support, ship recycling assistance, ship chandling, marine spares, and cargo operation services across Indian ports.",
 };
 
 export default function RootLayout({

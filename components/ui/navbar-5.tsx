@@ -27,6 +27,7 @@ const services = [
 
 const navigationLinks = [
   { label: "About us", href: "/about" },
+  { label: "Certifications", href: "/#certifications" },
   { label: "Ship Recycling", href: "/#recycling" },
   { label: "Coverage", href: "/#coverage" },
   { label: "Contact", href: "/#contact" },

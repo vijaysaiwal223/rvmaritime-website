@@ -13,6 +13,7 @@ export function SiteFooter() {
             <div>
               <h2>Company</h2>
               <a href="/about">About R V Maritime</a>
+              <a href="/#certifications">Certifications</a>
               <a href="/#services">Services</a>
               <a href="/#coverage">Coverage</a>
               <a href="/#contact">Contact</a>
@@ -33,7 +34,7 @@ export function SiteFooter() {
         </div>
         <div className="footer-bottom">
           <p>© 2026 R V Maritime Private Limited. First draft website content for review.</p>
-          <p>Marine agency · Ship recycling · Spares · Chandling · Cargo support</p>
+          <p>ISO 9001 · ISO 14001 · ISO 45001 · Marine agency · Ship recycling</p>
         </div>
       </div>
     </footer>
