@@ -5,7 +5,7 @@ export function SiteFooter() {
         <div className="footer-main">
           <div className="footer-brand">
             <a className="footer-logo" href="/" aria-label="R V Maritime home">
-              <img src="/assets/logo-white-bg.png" alt="R V Maritime Private Limited logo" />
+              <img src="/assets/rv-maritime-logo.jpeg" alt="R V Maritime Private Limited logo" />
             </a>
             <p>Single-window marine services, engineering assistance, ship recycling coordination, spares, chandling, and vessel support across Indian ports.</p>
           </div>

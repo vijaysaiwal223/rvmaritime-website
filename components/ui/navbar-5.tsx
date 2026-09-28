@@ -26,7 +26,7 @@ const services = [
 ];
 
 const navigationLinks = [
-  { label: "About", href: "/about" },
+  { label: "About us", href: "/about" },
   { label: "Ship Recycling", href: "/#recycling" },
   { label: "Coverage", href: "/#coverage" },
   { label: "Contact", href: "/#contact" },
@@ -37,7 +37,7 @@ export function Navbar5() {
     <header className="site-header">
       <div className="site-header-inner">
         <a className="brand" href="/" aria-label="R V Maritime home">
-          <img src="/assets/logo-white-bg.png" alt="R V Maritime Private Limited logo" />
+          <img src="/assets/rv-maritime-logo.jpeg" alt="R V Maritime Private Limited logo" />
         </a>
 
         <NavigationMenu className="hidden justify-self-center lg:flex">
@@ -80,9 +80,8 @@ export function Navbar5() {
           <SheetContent>
             <SheetHeader>
               <SheetTitle>
-                <a className="flex w-fit items-center gap-3" href="/">
-                  <img className="size-14 rounded-lg object-contain shadow-xs" src="/assets/logo-white-bg.png" alt="" />
-                  <span>R V Maritime</span>
+                <a className="block w-fit" href="/" aria-label="R V Maritime home">
+                  <img className="h-16 w-auto rounded-md object-contain" src="/assets/rv-maritime-logo-cropped.png" alt="" />
                 </a>
               </SheetTitle>
             </SheetHeader>

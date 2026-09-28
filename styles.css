@@ -77,18 +77,18 @@ img {
 }
 
 .brand {
-  width: 58px;
-  min-width: 58px;
+  width: 112px;
+  min-width: 112px;
   justify-self: start;
 }
 
 .brand img {
-  width: 58px;
+
   height: 58px;
   object-fit: contain;
   object-position: center;
-  border-radius: 10px;
-  box-shadow: var(--shadow-sm);
+  border-radius: 8px;
+  /* box-shadow: var(--shadow-sm); */
 }
 
 .nav {
@@ -1438,12 +1438,12 @@ section {
   }
 
   .brand {
-    width: 54px;
-    min-width: 54px;
+    width: 92px;
+    min-width: 92px;
   }
 
   .brand img {
-    width: 54px;
+    width: 92px;
     height: 54px;
   }
 
